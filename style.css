@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --Blue: hsl(246, 80%, 60%);
+    --Light-red: hsl(15, 100%, 70%);
+    --Soft-blue: hsl(195, 74%, 62%);
+    --Light-red: hsl(348, 100%, 68%);
+    --Lime-green: hsl(145, 58%, 55%);
+    --Violet: hsl(264, 64%, 52%);
+    --Soft-orange: hsl(43, 84%, 65%);
+    --Very-dark-blue: hsl(226, 43%, 10%);
+    --Dark-blue: hsl(235, 46%, 20%);
+    --Desaturated-blue: hsl(235, 45%, 61%);
+    --Pale-Blue: hsl(236, 100%, 87%);
+    --White: white;
+} 
+body{
+    background-color: var(--Very-dark-blue);
+    font-family: "Rubik", sans-serif;
+    color: var(--Pale-Blue);
+}
+.main-container{
+   /* border: 2px solid white;*/
+    width: 328px;
+    margin: 155px;
+    position: relative;
+    
+}
+.first-section{
+    border: 2px solid green;
+}
+.main-card__user{
+    border: 1px solid rgb(128, 0, 11);
+    background-color: var(--Blue);
+    display: flex;
+    border-radius: 16px;
+    padding: 30px;
+    
+}
+.main_card__image{
+    width: 52px;
+    margin-right: 8px;
+    border: 3px solid var(--White);
+    border-radius: 50%;
+}
+.main-card__title{
+    font-size: 0.9em;
+    margin: 10px 0 4px;
+}
+.main-card__name{
+    border: 1px solid yellow;
+    font-size: 1.5em;
+    font-weight: 300;
+    color: var(--White);
+}
+.main-card__dates{
+    border: 1px solid blue;
+    background-color: var(--Dark-blue);
+    border-radius: 16px;
+    display: flex;
+    justify-content: space-around;
+    height: 100px;
+    padding-top: 55px;
+    font-size: 1.2em;
+    position: absolute;
+    width: 100%;
+    top: 105px;
+}
+.main_card__frequency:hover{
+    border: 1px solid rgb(13, 248, 29);
+    cursor: pointer;
+    color: var(--White);
+
+}
+.second-section{
+    border: 1px solid purple;
+    margin-top: 96px;
+
+}
