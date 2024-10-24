@@ -8,12 +8,12 @@
 
 :root{
     --Blue: hsl(246, 80%, 60%);
-    --Light-red: hsl(15, 100%, 70%);
+    --Light-orange: hsl(15, 100%, 70%);
     --Soft-blue: hsl(195, 74%, 62%);
     --Light-red: hsl(348, 100%, 68%);
     --Lime-green: hsl(145, 58%, 55%);
     --Violet: hsl(264, 64%, 52%);
-    --Soft-orange: hsl(43, 84%, 65%);
+    --Soft-yellow: hsl(43, 84%, 65%);
     --Very-dark-blue: hsl(226, 43%, 10%);
     --Dark-blue: hsl(235, 46%, 20%);
     --Desaturated-blue: hsl(235, 45%, 61%);
@@ -26,26 +26,25 @@ body{
     color: var(--Pale-Blue);
 }
 .main-container{
-   /* border: 2px solid white;*/
     width: 328px;
     margin: 155px;
-    position: relative;
     
 }
 .first-section{
-    border: 2px solid green;
+    position: relative;
 }
 .main-card__user{
-    border: 1px solid rgb(128, 0, 11);
     background-color: var(--Blue);
     display: flex;
     border-radius: 16px;
     padding: 30px;
-    
+    position: absolute;
+    width: 100%;
+    z-index: 1;
 }
 .main_card__image{
-    width: 52px;
-    margin-right: 8px;
+    width: 72px;
+    margin-right: 5px;
     border: 3px solid var(--White);
     border-radius: 50%;
 }
@@ -54,13 +53,12 @@ body{
     margin: 10px 0 4px;
 }
 .main-card__name{
-    border: 1px solid yellow;
     font-size: 1.5em;
     font-weight: 300;
     color: var(--White);
 }
 .main-card__dates{
-    border: 1px solid blue;
+    /*border: 1px solid blue;*/
     background-color: var(--Dark-blue);
     border-radius: 16px;
     display: flex;
@@ -73,13 +71,128 @@ body{
     top: 105px;
 }
 .main_card__frequency:hover{
-    border: 1px solid rgb(13, 248, 29);
     cursor: pointer;
     color: var(--White);
 
 }
 .second-section{
-    border: 1px solid purple;
-    margin-top: 96px;
+    padding-top: 220px;
 
 }
+.card{
+    /*border: 1px solid rgb(255, 12, 32);*/
+    position: relative;
+    margin-bottom: 105px;
+}
+.card__background{
+    background-color: var(--Light-orange);
+    height: 80px;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    overflow: hidden;
+}
+.card__image{
+    margin-top: -10px;
+    padding-left: 235px;
+}
+.card__details{
+    background-color: var(--Dark-blue);
+    display: flex;
+    flex-direction: column;
+    height: 122px;
+    justify-content: space-around;
+    padding: 25px;
+    border-radius: 15px;
+    color: var(--White);
+    position: absolute; 
+   /*Recordatorio, cuando tenemos un pos.absolute debemos de tener un 
+   padre con un position.relative(en este caso en el card esta el relative*/
+   width: 100%;
+   bottom: -85px;
+}
+.card__details:hover{
+    background-color: var(--Desaturated-blue);
+    cursor: pointer;
+}
+.card__activity, .card__time{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--White);
+}
+.card__title{
+    font-size: 1.2em;
+    font-weight: 500;
+}
+.card__hours{
+    font-size: 2em;
+    font-weight: 250;
+}
+.attribution { 
+    font-size: 11px;
+    text-align: center;
+    margin-bottom: 60px; 
+}
+.attribution a{
+    color: hsl(228, 45%, 44%); 
+}
+@media(min-width: 1200px){ /*punto de quiebre*/
+    .main-container{
+         width: 1150px;
+         display: flex;
+     }
+     .first-section{
+        padding-top: 24px;
+        width: 280px;
+        height: 564px;
+     }
+     .second-section{
+        height: 564px;
+        width: 860px;
+        padding-top: 0;
+        display: grid;
+        grid-template-columns: repeat(3,1fr); /*Fraccion de columnas (3colum)*/
+        padding: 24px;
+     }
+     .main-card__user{
+        height: 360px;
+        flex-direction: column;
+     }
+     .main_card__image{
+        width: 85px;
+        margin-bottom: 45px;
+     }
+     .main-card__title{
+        font-size: 1em;
+     }
+     .main-card__name{
+        font-size: 2.4em;
+     }
+     .main-card__dates{
+        margin-top: 245px;
+        height: 200px;
+        flex-direction: column;
+        padding: 40px 32px 18px;
+     }
+     .card{
+        width: 240px;
+        height: 244;
+        margin-bottom: 25px;
+     }
+     .card__image{
+        padding-left: 145px;
+     }
+     .card__details{
+        height: 200px;
+        bottom: -10px;
+     }
+     .card__time{
+        height: 300px;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px 0px;
+     }
+
+
+}
+
